@@ -835,6 +835,36 @@ h3 {
   gap: 16px;
 }
 
+.product-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.product-visual-grid figure {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.product-visual-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.product-visual-grid figcaption {
+  padding: 12px 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
 .watchlist-grid article,
 .product-radar-grid article {
   padding: 22px;
@@ -871,19 +901,26 @@ h3 {
   color: rgba(255, 255, 255, 0.74);
 }
 
-.subscribe-grid {
+.price-block {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.subscribe-grid div {
-  display: grid;
-  gap: 8px;
-  padding: 16px;
+  gap: 10px;
+  justify-items: start;
+  align-content: center;
+  padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.06);
+}
+
+.price-block strong {
+  color: white;
+  font-size: clamp(44px, 6vw, 74px);
+  line-height: 0.95;
+}
+
+.price-block span {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 800;
 }
 
 .watchlist-grid p,
@@ -978,6 +1015,7 @@ h3 {
   .intel-split,
   .watchlist-grid,
   .product-radar-grid,
+  .product-visual-grid,
   .metrics {
     grid-template-columns: 1fr;
   }
@@ -994,7 +1032,6 @@ h3 {
   .issue-hero,
   .intro-panel,
   .subscribe-panel,
-  .subscribe-grid,
   .market-image-row,
   .localize-table div,
   .brief-strip {
