@@ -671,17 +671,36 @@ h3 {
 
 .market-image-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 16px;
   margin-bottom: 18px;
+}
+
+.market-image-row figure {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  box-shadow: var(--shadow);
 }
 
 .market-image-row img,
 .feature-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 8;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
+}
+
+.market-image-row figcaption {
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.feature-image img {
   border: 1px solid var(--line);
   border-radius: 10px;
   box-shadow: var(--shadow);
@@ -776,7 +795,7 @@ h3 {
 
 .intel-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.2fr 1.2fr 1.4fr;
+  grid-template-columns: 0.95fr 0.95fr 1fr 1.35fr 1.25fr 1.45fr;
   border-top: 1px solid var(--line);
 }
 
@@ -803,6 +822,19 @@ h3 {
   font-weight: 1000;
 }
 
+.intel-row i {
+  display: inline-flex;
+  margin: 0 5px 5px 0;
+  padding: 4px 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: #f7f4ed;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+}
+
 .watch-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -811,8 +843,21 @@ h3 {
 
 .watch-grid article,
 .intel-split > div {
+  overflow: hidden;
   padding: 22px;
   background: white;
+}
+
+.watch-grid article img,
+.watchlist-grid article img,
+.product-radar-grid article img {
+  display: block;
+  width: calc(100% + 44px);
+  margin: -22px -22px 18px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+  background: #f6f1e8;
 }
 
 .watch-grid p,
@@ -829,7 +874,8 @@ h3 {
 }
 
 .watchlist-grid,
-.product-radar-grid {
+.product-radar-grid,
+.angle-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
@@ -866,7 +912,9 @@ h3 {
 }
 
 .watchlist-grid article,
-.product-radar-grid article {
+.product-radar-grid article,
+.angle-grid article {
+  overflow: hidden;
   padding: 22px;
   background: white;
 }
@@ -924,9 +972,22 @@ h3 {
 }
 
 .watchlist-grid p,
-.product-radar-grid p {
+.product-radar-grid p,
+.angle-grid p {
   color: var(--muted);
   line-height: 1.62;
+}
+
+.angle-grid span {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 14px;
+  border-radius: 999px;
+  color: white;
+  background: var(--ink);
+  font-weight: 1000;
 }
 
 .sources ul {
@@ -1015,7 +1076,9 @@ h3 {
   .intel-split,
   .watchlist-grid,
   .product-radar-grid,
+  .angle-grid,
   .product-visual-grid,
+  .market-image-row,
   .metrics {
     grid-template-columns: 1fr;
   }
