@@ -465,6 +465,119 @@ h3 {
   padding: 24px;
 }
 
+.issue-body {
+  background:
+    radial-gradient(circle at 12% 6%, rgba(255, 228, 107, 0.72), transparent 24%),
+    radial-gradient(circle at 86% 10%, rgba(79, 124, 255, 0.18), transparent 26%),
+    linear-gradient(180deg, #fff8e8 0%, #ffffff 42%, #f5fffb 100%);
+}
+
+.issue-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 26px;
+  align-items: end;
+  padding: clamp(40px, 7vw, 90px) clamp(18px, 5vw, 64px) clamp(28px, 5vw, 56px);
+}
+
+.issue-note,
+.sources {
+  padding: 22px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.issue-note p {
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.issue-section {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.signal-grid article,
+.script-list article,
+.deep-grid article {
+  padding: 22px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.signal-grid p,
+.script-list p,
+.deep-grid p,
+.sources p,
+.sources li {
+  color: var(--muted);
+  line-height: 1.66;
+}
+
+.signal-grid b {
+  display: block;
+  margin-top: 14px;
+}
+
+.script-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.localize-table {
+  display: grid;
+  gap: 12px;
+}
+
+.localize-table div {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.localize-table span {
+  color: var(--muted);
+  line-height: 1.58;
+}
+
+.deep-dive {
+  background: #fff0bd;
+}
+
+.deep-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.sources ul {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.sources a {
+  color: var(--teal);
+  font-weight: 900;
+}
+
 .signup {
   display: grid;
   gap: 14px;
@@ -529,7 +642,15 @@ h3 {
   .result-grid,
   .opportunity-grid,
   .market-grid,
+  .signal-grid,
+  .script-list,
+  .deep-grid,
   .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .issue-hero,
+  .localize-table div {
     grid-template-columns: 1fr;
   }
 
