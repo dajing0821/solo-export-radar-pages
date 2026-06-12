@@ -686,6 +686,72 @@ h3 {
   gap: 8px;
 }
 
+.intel-table {
+  display: grid;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.intel-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr 1.2fr 1.4fr;
+  border-top: 2px solid var(--ink);
+}
+
+.intel-row:first-child {
+  border-top: 0;
+}
+
+.intel-row span {
+  padding: 14px;
+  border-left: 2px solid var(--ink);
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.intel-row span:first-child {
+  border-left: 0;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.intel-row.head span {
+  color: var(--ink);
+  background: var(--yellow);
+  font-weight: 1000;
+}
+
+.watch-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.watch-grid article,
+.intel-split > div {
+  padding: 22px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.watch-grid p,
+.intel-split li {
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.intel-split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
 .sources ul {
   display: grid;
   gap: 8px;
@@ -768,8 +834,19 @@ h3 {
   .evidence-grid,
   .paid-grid,
   .test-grid,
+  .watch-grid,
+  .intel-split,
   .metrics {
     grid-template-columns: 1fr;
+  }
+
+  .intel-row {
+    grid-template-columns: 1fr;
+  }
+
+  .intel-row span {
+    border-left: 0;
+    border-top: 1px solid var(--line);
   }
 
   .issue-hero,
