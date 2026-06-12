@@ -1,8 +1,5 @@
-# 出海机会雷达
+# 小语种爆款洞察
 
-GitHub Pages public preview for:
-
-- 海外项目机会雷达
-- 海外工作雷达
+GitHub Pages public preview for a small-language TikTok/YouTube trend subscription product.
 
 Open `index.html` as the entry page.

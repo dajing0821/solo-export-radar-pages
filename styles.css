@@ -322,7 +322,8 @@ h3 {
 }
 
 .result-grid,
-.opportunity-grid {
+.opportunity-grid,
+.market-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
@@ -332,13 +333,31 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.market-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .result-grid article,
-.opportunity {
+.opportunity,
+.market-grid article {
   padding: 22px;
   border: 2px solid var(--ink);
   border-radius: 8px;
   background: white;
   box-shadow: 5px 5px 0 var(--ink);
+}
+
+.market-grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 34px;
+  margin-bottom: 16px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: var(--yellow);
+  font-weight: 1000;
 }
 
 .result-grid span {
@@ -368,6 +387,7 @@ h3 {
 
 .result-grid p,
 .opportunity p,
+.market-grid p,
 .cta p {
   color: var(--muted);
   line-height: 1.66;
@@ -434,6 +454,17 @@ h3 {
   background: #d8fff0;
 }
 
+.trend-cta {
+  background: #ffe8f3;
+}
+
+.redirect-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
 .signup {
   display: grid;
   gap: 14px;
@@ -497,6 +528,7 @@ h3 {
   .product-cards,
   .result-grid,
   .opportunity-grid,
+  .market-grid,
   .metrics {
     grid-template-columns: 1fr;
   }
