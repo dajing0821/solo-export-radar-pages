@@ -752,6 +752,39 @@ h3 {
   margin-top: 18px;
 }
 
+.watchlist-grid,
+.product-radar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.watchlist-grid article,
+.product-radar-grid article {
+  padding: 22px;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.watchlist-grid span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 6px 9px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: #fff0f7;
+  font-size: 12px;
+  font-weight: 1000;
+}
+
+.watchlist-grid p,
+.product-radar-grid p {
+  color: var(--muted);
+  line-height: 1.62;
+}
+
 .sources ul {
   display: grid;
   gap: 8px;
@@ -836,6 +869,8 @@ h3 {
   .test-grid,
   .watch-grid,
   .intel-split,
+  .watchlist-grid,
+  .product-radar-grid,
   .metrics {
     grid-template-columns: 1fr;
   }
