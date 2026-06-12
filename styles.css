@@ -466,10 +466,23 @@ h3 {
 }
 
 .issue-body {
-  background:
-    radial-gradient(circle at 12% 6%, rgba(255, 228, 107, 0.72), transparent 24%),
-    radial-gradient(circle at 86% 10%, rgba(79, 124, 255, 0.18), transparent 26%),
-    linear-gradient(180deg, #fff8e8 0%, #ffffff 42%, #f5fffb 100%);
+  --ink: #18202a;
+  --muted: #66717d;
+  --line: rgba(24, 32, 42, 0.12);
+  --shadow: 0 18px 54px rgba(40, 52, 64, 0.11);
+  background: linear-gradient(180deg, #fbf7ef 0%, #ffffff 38%, #f6faf7 100%);
+}
+
+.issue-body .topbar {
+  background: rgba(251, 247, 239, 0.92);
+}
+
+.issue-body .brand-mark,
+.issue-body .button,
+.issue-body .signup button,
+.issue-body .product-card span {
+  border: 1px solid var(--line);
+  box-shadow: none;
 }
 
 .issue-hero {
@@ -483,10 +496,10 @@ h3 {
 .issue-note,
 .sources {
   padding: 22px;
-  border: 2px solid var(--ink);
-  border-radius: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   background: white;
-  box-shadow: 5px 5px 0 var(--ink);
+  box-shadow: var(--shadow);
 }
 
 .issue-note p {
@@ -496,6 +509,53 @@ h3 {
 
 .issue-section {
   background: rgba(255, 255, 255, 0.45);
+}
+
+.intro-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.7fr);
+  gap: 22px;
+  align-items: start;
+  background: #ffffff;
+}
+
+.intro-copy,
+.intro-points,
+.subscribe-panel,
+.evidence-card,
+.intel-table,
+.watch-grid article,
+.watchlist-grid article,
+.product-radar-grid article,
+.deep-grid article,
+.intel-split > div {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.intro-copy,
+.intro-points {
+  padding: 24px;
+  background: white;
+}
+
+.intro-copy p,
+.intro-points span,
+.subscribe-panel p,
+.subscribe-grid span {
+  color: var(--muted);
+  line-height: 1.68;
+}
+
+.intro-points {
+  display: grid;
+  gap: 14px;
+}
+
+.intro-points div {
+  display: grid;
+  gap: 5px;
 }
 
 .evidence-section {
@@ -511,10 +571,7 @@ h3 {
 .evidence-card {
   overflow: hidden;
   display: grid;
-  border: 2px solid var(--ink);
-  border-radius: 8px;
   background: white;
-  box-shadow: 5px 5px 0 var(--ink);
 }
 
 .evidence-card img {
@@ -522,7 +579,7 @@ h3 {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-bottom: 2px solid var(--ink);
+  border-bottom: 1px solid var(--line);
   background: #fff8e8;
 }
 
@@ -612,6 +669,28 @@ h3 {
   gap: 16px;
 }
 
+.market-image-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.market-image-row img,
+.feature-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.feature-image {
+  margin-bottom: 18px;
+}
+
 .paid-card {
   margin-bottom: 28px;
   padding: 24px;
@@ -688,17 +767,17 @@ h3 {
 
 .intel-table {
   display: grid;
-  border: 2px solid var(--ink);
-  border-radius: 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
   overflow: hidden;
   background: white;
-  box-shadow: 5px 5px 0 var(--ink);
+  box-shadow: var(--shadow);
 }
 
 .intel-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1.2fr 1.2fr 1.4fr;
-  border-top: 2px solid var(--ink);
+  border-top: 1px solid var(--line);
 }
 
 .intel-row:first-child {
@@ -707,7 +786,7 @@ h3 {
 
 .intel-row span {
   padding: 14px;
-  border-left: 2px solid var(--ink);
+  border-left: 1px solid var(--line);
   color: var(--muted);
   line-height: 1.5;
 }
@@ -720,7 +799,7 @@ h3 {
 
 .intel-row.head span {
   color: var(--ink);
-  background: var(--yellow);
+  background: #f3efe7;
   font-weight: 1000;
 }
 
@@ -733,10 +812,7 @@ h3 {
 .watch-grid article,
 .intel-split > div {
   padding: 22px;
-  border: 2px solid var(--ink);
-  border-radius: 8px;
   background: white;
-  box-shadow: 5px 5px 0 var(--ink);
 }
 
 .watch-grid p,
@@ -762,21 +838,52 @@ h3 {
 .watchlist-grid article,
 .product-radar-grid article {
   padding: 22px;
-  border: 2px solid var(--ink);
-  border-radius: 8px;
   background: white;
-  box-shadow: 5px 5px 0 var(--ink);
 }
 
 .watchlist-grid span {
   display: inline-flex;
   margin-bottom: 12px;
   padding: 6px 9px;
-  border: 2px solid var(--ink);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  background: #fff0f7;
+  background: #f5f0e8;
   font-size: 12px;
   font-weight: 1000;
+}
+
+.subscribe-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1fr);
+  gap: 22px;
+  align-items: start;
+  margin: 0 clamp(18px, 5vw, 64px) clamp(54px, 7vw, 90px);
+  background: #18202a;
+  color: white;
+}
+
+.subscribe-panel .eyebrow {
+  color: #f5d36c;
+}
+
+.subscribe-panel p,
+.subscribe-grid span {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.subscribe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.subscribe-grid div {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .watchlist-grid p,
@@ -885,6 +992,10 @@ h3 {
   }
 
   .issue-hero,
+  .intro-panel,
+  .subscribe-panel,
+  .subscribe-grid,
+  .market-image-row,
   .localize-table div,
   .brief-strip {
     grid-template-columns: 1fr;
