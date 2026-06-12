@@ -918,6 +918,12 @@ h3 {
   font-weight: 1000;
 }
 
+.source-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .watch-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
