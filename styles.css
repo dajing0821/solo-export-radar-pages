@@ -1145,10 +1145,248 @@ h3 {
   min-height: 50px;
 }
 
+.penny-body {
+  --ink: #173026;
+  --muted: #64736b;
+  --line: rgba(23, 48, 38, 0.13);
+  --leaf: #2f8f62;
+  --mint: #dff7e7;
+  --sun: #f6d96d;
+  --cream: #fffaf0;
+  --shadow: 0 18px 54px rgba(28, 64, 48, 0.11);
+  background: linear-gradient(180deg, #fff9ed 0%, #f6fbf4 45%, #ffffff 100%);
+  color: var(--ink);
+}
+
+.penny-topbar {
+  background: rgba(255, 249, 237, 0.92);
+}
+
+.penny-mark {
+  background: #dff7e7;
+}
+
+.penny-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.85fr);
+  gap: 28px;
+  align-items: center;
+  padding: clamp(40px, 7vw, 92px) clamp(18px, 5vw, 64px) clamp(28px, 5vw, 58px);
+}
+
+.penny-hero-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.penny-hero h1 {
+  max-width: 860px;
+}
+
+.penny-hero-media {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.penny-hero-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}
+
+.penny-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.penny-hero-points span,
+.penny-pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 1000;
+}
+
+.penny-principles {
+  background: white;
+}
+
+.penny-principle-grid,
+.penny-card-grid,
+.grade-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.penny-principle-grid article,
+.penny-card,
+.deadline-list div,
+.deep-read > div,
+.grade-grid article,
+.risk-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.penny-principle-grid article,
+.penny-card,
+.deep-read > div,
+.grade-grid article,
+.risk-card {
+  padding: 22px;
+}
+
+.penny-principle-grid p,
+.penny-card p,
+.deadline-list p,
+.deep-read p,
+.grade-grid p,
+.risk-card li {
+  color: var(--muted);
+  line-height: 1.66;
+}
+
+.penny-section {
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.penny-section.soft {
+  background: #f3fbf0;
+}
+
+.penny-card {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.penny-card.featured {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #ffffff 0%, #f4fff5 100%);
+}
+
+.penny-card.caution {
+  background: #fff7ee;
+}
+
+.penny-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.penny-pill.open {
+  background: #ddf8e7;
+}
+
+.penny-pill.watch {
+  background: #fff4c7;
+}
+
+.penny-pill.caution {
+  background: #ffe2cf;
+}
+
+.penny-summary {
+  font-size: 17px;
+}
+
+.penny-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.penny-facts.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.penny-facts div,
+.penny-judgement {
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.72);
+}
+
+.penny-facts b,
+.penny-judgement b,
+.grade-grid span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.penny-facts span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.penny-note {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.deadline-list {
+  display: grid;
+  gap: 12px;
+}
+
+.deadline-list div {
+  display: grid;
+  grid-template-columns: 120px minmax(180px, 0.4fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 18px;
+}
+
+.deadline-list span {
+  color: var(--leaf);
+  font-weight: 1000;
+}
+
+.deep-read {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.risk-card ol {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 0;
+  padding-left: 22px;
+}
+
+.penny-subscribe {
+  background: #173026;
+}
+
 @media (max-width: 1020px) {
   .split-hero,
   .hero,
-  .cta {
+  .cta,
+  .penny-hero {
     grid-template-columns: 1fr;
   }
 
@@ -1165,6 +1403,13 @@ h3 {
   }
 
   .trend-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .penny-card-grid,
+  .penny-principle-grid,
+  .deep-read,
+  .grade-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1210,7 +1455,21 @@ h3 {
   .trend-card-grid,
   .product-visual-grid,
   .market-image-row,
+  .penny-card-grid,
+  .penny-principle-grid,
+  .deep-read,
+  .grade-grid,
   .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .penny-card.featured {
+    grid-column: span 1;
+  }
+
+  .penny-facts,
+  .penny-facts.compact,
+  .deadline-list div {
     grid-template-columns: 1fr;
   }
 
