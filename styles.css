@@ -1375,13 +1375,23 @@ h3 {
   display: grid;
   grid-template-columns: 120px minmax(180px, 0.4fr) minmax(0, 1fr);
   gap: 16px;
-  align-items: center;
+  align-items: start;
   padding: 18px;
 }
 
 .deadline-list span {
   color: var(--leaf);
   font-weight: 1000;
+}
+
+.deadline-list b {
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.deadline-list .source-link {
+  justify-self: start;
+  margin-top: 2px;
 }
 
 .deep-read {
