@@ -1272,6 +1272,7 @@ h3 {
   display: grid;
   gap: 16px;
   align-content: start;
+  overflow: hidden;
 }
 
 .penny-card.featured {
@@ -1281,6 +1282,14 @@ h3 {
 
 .penny-card.caution {
   background: #fff7ee;
+}
+
+.penny-card-image {
+  width: calc(100% + 44px);
+  margin: -22px -22px 2px;
+  aspect-ratio: 16 / 8.8;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
 }
 
 .penny-card-head {
@@ -1352,6 +1361,16 @@ h3 {
   gap: 12px;
 }
 
+.penny-wide-image {
+  width: 100%;
+  margin-bottom: 16px;
+  aspect-ratio: 16 / 6.2;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
 .deadline-list div {
   display: grid;
   grid-template-columns: 120px minmax(180px, 0.4fr) minmax(0, 1fr);
@@ -1369,6 +1388,44 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
+}
+
+.deep-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.7fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+
+.deep-feature img {
+  width: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.deep-feature-copy {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #173026;
+  color: white;
+  box-shadow: var(--shadow);
+}
+
+.deep-feature-copy .eyebrow,
+.deep-feature-copy p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.deep-feature-copy h3 {
+  color: white;
 }
 
 .risk-card ol {
@@ -1408,6 +1465,7 @@ h3 {
 
   .penny-card-grid,
   .penny-principle-grid,
+  .deep-feature,
   .deep-read,
   .grade-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1434,7 +1492,11 @@ h3 {
 
   .nav {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    white-space: nowrap;
   }
 
   .product-cards,
@@ -1457,6 +1519,7 @@ h3 {
   .market-image-row,
   .penny-card-grid,
   .penny-principle-grid,
+  .deep-feature,
   .deep-read,
   .grade-grid,
   .metrics {
@@ -1471,6 +1534,19 @@ h3 {
   .penny-facts.compact,
   .deadline-list div {
     grid-template-columns: 1fr;
+  }
+
+  .penny-card-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .deep-feature img {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .penny-wide-image {
+    aspect-ratio: 16 / 10;
   }
 
   .trend-card.large {
