@@ -888,6 +888,25 @@ h3 {
   line-height: 1.62;
 }
 
+.trend-points {
+  display: grid;
+  gap: 7px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbf7ef;
+}
+
+.trend-points b {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.trend-points p {
+  margin: 0;
+  font-size: 14px;
+}
+
 .trend-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1067,6 +1086,12 @@ h3 {
   line-height: 1.62;
 }
 
+.product-radar-grid b {
+  display: block;
+  margin-top: 14px;
+  color: var(--ink);
+}
+
 .angle-grid span {
   display: grid;
   place-items: center;
@@ -1138,6 +1163,22 @@ h3 {
   .result-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .trend-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trend-card.large {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+  }
+
+  .trend-card img,
+  .trend-card.large img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1176,6 +1217,21 @@ h3 {
   .trend-card.large {
     grid-column: span 1;
     grid-template-columns: 1fr;
+  }
+
+  .trend-card img,
+  .trend-card.large img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .trend-copy {
+    padding: 18px;
+  }
+
+  .trend-points {
+    padding: 12px;
   }
 
   .intel-row {
