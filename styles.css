@@ -1177,10 +1177,11 @@ h3 {
   background: rgba(255, 249, 237, 0.92);
 }
 
-.penny-mark {
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #fff7b2 0%, #f6d96d 42%, #dff7e7 100%);
-  box-shadow: 3px 3px 0 var(--ink);
+.penny-nav-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 12px rgba(255, 106, 0, 0.16));
 }
 
 .penny-hero {
@@ -1209,8 +1210,8 @@ h3 {
   gap: 14px;
   align-items: center;
   justify-content: space-between;
-  max-width: 760px;
-  padding: 12px;
+  max-width: 820px;
+  padding: 14px 16px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.74);
@@ -1221,34 +1222,13 @@ h3 {
   display: flex;
   gap: 12px;
   align-items: center;
+  min-width: min(100%, 440px);
 }
 
-.penny-logo-badge {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border: 2px solid var(--ink);
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #fff7b2 0%, #f6d96d 42%, #dff7e7 100%);
-  box-shadow: 4px 4px 0 var(--ink);
-  font-weight: 1000;
-}
-
-.penny-logo-lockup strong,
-.penny-logo-lockup span {
+.penny-full-logo {
+  width: min(430px, 100%);
+  height: auto;
   display: block;
-}
-
-.penny-logo-lockup strong {
-  font-size: 24px;
-  letter-spacing: 0;
-}
-
-.penny-logo-lockup div > span {
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 900;
 }
 
 .penny-issue-tag {
@@ -1531,6 +1511,15 @@ h3 {
 
 .penny-subscribe {
   background: #173026;
+}
+
+.penny-subscribe-logo {
+  display: block;
+  width: min(360px, 100%);
+  margin-bottom: 18px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: white;
 }
 
 .logo-option-body main.logo-option-main {
