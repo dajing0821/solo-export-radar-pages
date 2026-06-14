@@ -1533,6 +1533,74 @@ h3 {
   background: #173026;
 }
 
+.logo-option-body main.logo-option-main {
+  max-width: 1180px;
+  margin: 0 auto;
+  border-right: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.logo-option-hero {
+  padding: clamp(42px, 7vw, 82px) clamp(18px, 5vw, 64px) 28px;
+  background: linear-gradient(135deg, #fffaf0 0%, #e9f8ea 64%, #f6d96d 100%);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo-option-hero h1 {
+  max-width: 760px;
+}
+
+.logo-option-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  padding: clamp(22px, 5vw, 48px) clamp(18px, 5vw, 64px) clamp(44px, 7vw, 86px);
+}
+
+.logo-option-card {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fffdfa;
+  box-shadow: var(--shadow);
+}
+
+.logo-showcase {
+  display: grid;
+  place-items: center;
+  min-height: 190px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, rgba(23, 48, 38, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, #ffffff, #f5fbf2);
+  background-size: 22px 22px, auto;
+}
+
+.penny-svg-logo {
+  width: min(132px, 70%);
+  height: auto;
+}
+
+.logo-option-label {
+  color: var(--leaf);
+  font-size: 13px;
+  font-weight: 1000;
+}
+
+.logo-option-card h2 {
+  font-size: 24px;
+}
+
+.logo-option-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 @media (max-width: 1020px) {
   .split-hero,
   .hero,
@@ -1559,6 +1627,7 @@ h3 {
 
   .penny-card-grid,
   .penny-principle-grid,
+  .logo-option-grid,
   .deep-feature,
   .deep-read,
   .grade-grid {
@@ -1613,6 +1682,7 @@ h3 {
   .market-image-row,
   .penny-card-grid,
   .penny-principle-grid,
+  .logo-option-grid,
   .deep-feature,
   .deep-read,
   .grade-grid,
