@@ -1154,16 +1154,33 @@ h3 {
   --sun: #f6d96d;
   --cream: #fffaf0;
   --shadow: 0 18px 54px rgba(28, 64, 48, 0.11);
-  background: linear-gradient(180deg, #fff9ed 0%, #f6fbf4 45%, #ffffff 100%);
+  background:
+    linear-gradient(90deg, rgba(23, 48, 38, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, #fff9ed 0%, #eef9ef 48%, #fdfaf1 100%);
+  background-size: 44px 44px, auto;
   color: var(--ink);
 }
 
+.penny-body main {
+  max-width: 1180px;
+  margin: 0 auto 48px;
+  overflow: hidden;
+  border-right: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow: 0 30px 90px rgba(23, 48, 38, 0.08);
+}
+
 .penny-topbar {
+  max-width: 1180px;
+  margin: 0 auto;
   background: rgba(255, 249, 237, 0.92);
 }
 
 .penny-mark {
-  background: #dff7e7;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff7b2 0%, #f6d96d 42%, #dff7e7 100%);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 .penny-hero {
@@ -1172,6 +1189,9 @@ h3 {
   gap: 28px;
   align-items: center;
   padding: clamp(40px, 7vw, 92px) clamp(18px, 5vw, 64px) clamp(28px, 5vw, 58px);
+  background:
+    linear-gradient(135deg, rgba(223, 247, 231, 0.9) 0%, rgba(255, 250, 240, 0.82) 45%, rgba(246, 217, 109, 0.28) 100%);
+  border-bottom: 1px solid var(--line);
 }
 
 .penny-hero-copy {
@@ -1181,6 +1201,63 @@ h3 {
 
 .penny-hero h1 {
   max-width: 860px;
+}
+
+.penny-masthead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 760px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 12px 34px rgba(23, 48, 38, 0.08);
+}
+
+.penny-logo-lockup {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.penny-logo-badge {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff7b2 0%, #f6d96d 42%, #dff7e7 100%);
+  box-shadow: 4px 4px 0 var(--ink);
+  font-weight: 1000;
+}
+
+.penny-logo-lockup strong,
+.penny-logo-lockup span {
+  display: block;
+}
+
+.penny-logo-lockup strong {
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.penny-logo-lockup div > span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.penny-issue-tag {
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: #173026;
+  color: #fff8d8;
+  font-size: 12px;
+  font-weight: 1000;
 }
 
 .penny-hero-media {
@@ -1219,7 +1296,7 @@ h3 {
 }
 
 .penny-principles {
-  background: white;
+  background: #fffdfa;
 }
 
 .penny-principle-grid,
@@ -1261,11 +1338,11 @@ h3 {
 }
 
 .penny-section {
-  background: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .penny-section.soft {
-  background: #f3fbf0;
+  background: #f1faee;
 }
 
 .penny-card {
@@ -1273,6 +1350,12 @@ h3 {
   gap: 16px;
   align-content: start;
   overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.penny-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 62px rgba(28, 64, 48, 0.16);
 }
 
 .penny-card.featured {
@@ -1317,6 +1400,7 @@ h3 {
 
 .penny-summary {
   font-size: 17px;
+  color: #42534a;
 }
 
 .penny-facts {
